@@ -12,8 +12,30 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetAxis("Vertical") != 0 || Input.GetAxis("Horizontal") != 0)
+        {
+            Vector3 dir = new Vector3 (0,0,0);
+            if (Input.GetAxis("Horizontal") > 0)
+            {
+                dir.x = 1;
+            }
+            else if (Input.GetAxis("Horizontal") < 0)
+            {
+                dir.x = -1;
+            }
+            if (Input.GetAxis("Vertical") > 0)
+            {
+                dir.y = 1;
+            }
+            else if (Input.GetAxis("Vertical") < 0)
+            {
+                dir.y = -1;
+            }
+            Move(dir);
 
-        if (Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.W))
+        }
+
+        /**if (Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.W))
         {
             Move(new Vector3(-1, 1, 0));
         }
@@ -45,7 +67,7 @@ public class PlayerMovement : MonoBehaviour
         else if (Input.GetKey(KeyCode.D))
         {
             Move(new Vector3(1, 0, 0));
-        }
+        }**/
     }
 
 
