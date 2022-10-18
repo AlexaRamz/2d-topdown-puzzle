@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5c32bee308b77441b9c3892d2a8b87c, type: 3}
+  m_Name: LeftUp
+  m_EditorClassIdentifier: 
+  tileType: 0
+  isEndPoint: 01010000
+  onSprite: {fileID: 11400000, guid: 1d680eb93cdc4bb41add1c33cf980f58, type: 2}
+  offSprite: {fileID: 11400000, guid: 018919b7571dcd44987fc3abf85d6477, type: 2}
