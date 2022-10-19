@@ -20,7 +20,7 @@ public class GridGenerator : MonoBehaviour
     [ContextMenu("Generate Mesh")]
     void GenerateMesh()
     {
-        mesh = GetComponent<MeshFilter>().sharedMesh;
+        mesh = GetComponent<MeshFilter>().mesh;
         MakeProceduralGrid();
         UpdateMesh();
     }

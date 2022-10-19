@@ -15,6 +15,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetAxis("Vertical") != 0 || Input.GetAxis("Horizontal") != 0)
         {
             Vector3 dir = new Vector3 (0,0,0);
+
             if (Input.GetAxis("Horizontal") > 0)
             {
                 dir.x = 1;
@@ -23,6 +24,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 dir.x = -1;
             }
+
             if (Input.GetAxis("Vertical") > 0)
             {
                 dir.y = 1;
@@ -31,8 +33,8 @@ public class PlayerMovement : MonoBehaviour
             {
                 dir.y = -1;
             }
-            Move(dir);
 
+            Move(dir);
         }
 
         /**if (Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.W))
@@ -71,7 +73,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
 
-        public void Move(Vector3 direction)
+    public void Move(Vector3 direction)
     {
         if (!isMoving)
         {
