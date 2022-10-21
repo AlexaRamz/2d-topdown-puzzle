@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5c32bee308b77441b9c3892d2a8b87c, type: 3}
+  m_Name: HorizontalDoor
+  m_EditorClassIdentifier: 
+  tileType: 0
+  isEndPoint: 00010001
+  onSprite: {fileID: 11400000, guid: 122f283fd0047e64699a656c56431cc6, type: 2}
+  offSprite: {fileID: 11400000, guid: 5f2d5678b1c4f524384d53805b009b60, type: 2}

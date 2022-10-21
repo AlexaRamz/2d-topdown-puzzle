@@ -27,6 +27,10 @@ public class PuzzleLogic : MonoBehaviour
     public PuzzleTile rRightDown;
     public PuzzleTile rDownLeft;
     public PuzzleTile rLeftUp;
+    //doors
+    public PuzzleTile horizontalDoor;
+    public PuzzleTile verticalDoor;
+
 
     public RotateTile lineRotation;
     public RotateTile curveRotation;
@@ -44,7 +48,7 @@ public class PuzzleLogic : MonoBehaviour
             for (int y = 0; y < height; y++)
             {
                 TileBase thisTile = tilemap.GetTile(new Vector3Int(x, y, 0));
-                if (thisTile != null)
+                if (thisTile != null && thisTile.name != "Wall")
                 {
                     PuzzleTile tile = VariableFromName(thisTile.name);
                     TileState newState = new TileState { puzzleTile = tile };
@@ -83,6 +87,8 @@ public class PuzzleLogic : MonoBehaviour
         if (name == "RRightDown") return rRightDown;
         if (name == "RDownLeft") return rDownLeft;
         if (name == "RLeftUp") return rLeftUp;
+        if (name == "walldoors_3") return horizontalDoor;
+        if (name == "walldoors_1") return verticalDoor;
         return null;
     }
     void UpdateTileSprites()
