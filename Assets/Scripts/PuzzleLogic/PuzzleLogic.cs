@@ -31,12 +31,22 @@ public class PuzzleLogic : MonoBehaviour
     public PuzzleTile horizontalDoor;
     public PuzzleTile verticalDoor;
 
-
     public RotateTile lineRotation;
     public RotateTile curveRotation;
 
+    [System.Serializable]
+    public class ButtonToRotate
+    {
+        public Vector2Int buttonPos;
+        public Vector2Int rotatePos;
+    }
+    public List<ButtonToRotate> buttons = new List<ButtonToRotate>();
+
+    Transform plr;
+
     void Start()
     {
+        plr = GameObject.Find("Player").transform;
         gridLayout = tilemap.transform.parent.GetComponent<GridLayout>();
         puzzleArray = new TileState[height, width];
         GetPuzzleTiles();
@@ -237,6 +247,20 @@ public class PuzzleLogic : MonoBehaviour
             {
                 tile.AdvanceRotation();
                 SetPower();
+            }
+        }
+        if (Input.GetKeyDown("return"))
+        {
+            Vector3Int cellPos = gridLayout.WorldToCell(plr.position);
+            Vector2Int pos = new Vector2Int(cellPos.x, cellPos.y);
+            Debug.Log(pos);
+            foreach (ButtonToRotate item in buttons)
+            {
+                if (item.buttonPos == pos)
+                {
+                    GetTileFromArray(item.rotatePos).AdvanceRotation();
+                    SetPower();
+                }
             }
         }
     }

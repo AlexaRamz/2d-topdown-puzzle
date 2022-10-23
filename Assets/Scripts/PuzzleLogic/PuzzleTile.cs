@@ -10,7 +10,7 @@ public class PuzzleTile : ScriptableObject
     public enum TileType {
         Wire,
         Source,
-        Rotatable
+        Rotatable,
     }
 
     public TileType tileType;
