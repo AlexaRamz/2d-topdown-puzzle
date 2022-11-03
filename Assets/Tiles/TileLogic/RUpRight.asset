@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5c32bee308b77441b9c3892d2a8b87c, type: 3}
   m_Name: RUpRight
   m_EditorClassIdentifier: 
-  tileType: 2
+  tileType: 3
   isEndPoint: 01010000
   onSprite: {fileID: 11400000, guid: a73cf5ba69d6dd5479febed837e2581b, type: 2}
   offSprite: {fileID: 0}

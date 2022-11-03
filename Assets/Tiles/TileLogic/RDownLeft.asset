@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5c32bee308b77441b9c3892d2a8b87c, type: 3}
   m_Name: RDownLeft
   m_EditorClassIdentifier: 
-  tileType: 2
+  tileType: 3
   isEndPoint: 00000101
   onSprite: {fileID: 11400000, guid: e9e2ee962fb109342915ab1b0cb518ea, type: 2}
   offSprite: {fileID: 0}

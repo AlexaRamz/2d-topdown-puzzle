@@ -10,7 +10,10 @@ public class PuzzleTile : ScriptableObject
     public enum TileType {
         Wire,
         Source,
-        Rotatable,
+        LineRotatable,
+        CurveRotatable,
+        Light,
+        Other,
     }
 
     public TileType tileType;
@@ -25,7 +28,7 @@ public class TileState
     public PuzzleTile puzzleTile;
 
     public bool[] isPowered = new bool[4];
-    public bool on;
+    public bool on = false;
     public Vector2Int gridPos;
 
     public void UpdatePower()
@@ -48,7 +51,7 @@ public class TileState
         }
     }
 
-    public RotateTile rotateTile;
+    RotateTile rotateTile;
     int rotIndex = 0;
     public void AdvanceRotation()
     {
@@ -63,5 +66,14 @@ public class TileState
     {
         rotIndex = index;
         puzzleTile = rotateTile.tiles[rotIndex];
+    }
+    public void SetRotations(RotateTile rotations)
+    {
+        rotateTile = rotations;
+        int index = rotateTile.GetIndex(puzzleTile);
+        if (index != -1)
+        {
+            rotIndex = index;
+        }
     }
 }

@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8415554848565121196
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8415554848565121194}
+  - component: {fileID: 8415554848565121197}
+  m_Layer: 0
+  m_Name: PuzzleManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8415554848565121194
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8415554848565121196}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8415554848565121197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8415554848565121196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4c6cd386f4e30447811a29e6438f71f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bottomLeftCorner: {x: -10, y: -10}
+  tilemap: {fileID: 0}
+  source: {fileID: 11400000, guid: 8e00bbca4122c044da209a02cfba5144, type: 2}
+  light: {fileID: 11400000, guid: 50c81d92ec62449449b746803793faca, type: 2}
+  wires:
+  - {fileID: 11400000, guid: 0e74c92d13c3a7245a05e59ae83485be, type: 2}
+  - {fileID: 11400000, guid: ef01c4fd012d4e646b93b3c25fbb647e, type: 2}
+  - {fileID: 11400000, guid: 8fff473eb11ad1249afa2835d23f14ac, type: 2}
+  - {fileID: 11400000, guid: f8ed2181883df40438d17740a783ee94, type: 2}
+  - {fileID: 11400000, guid: 5fa1a2f4f420f754ab0c2334e40cfdc1, type: 2}
+  - {fileID: 11400000, guid: 7823c2332c80caa40be988981547481b, type: 2}
+  rotatableWires:
+  - {fileID: 11400000, guid: 4ba575f28bac3ee47b0fa74a5537bea4, type: 2}
+  - {fileID: 11400000, guid: c76fb694bb212b94c859e30d73b42da8, type: 2}
+  - {fileID: 11400000, guid: a056927944e33e848b4bc9916ac92673, type: 2}
+  - {fileID: 11400000, guid: d45392555c9268041a5cc598a94dbf27, type: 2}
+  - {fileID: 11400000, guid: 142fbb05faaffcb40af816d1d8947f62, type: 2}
+  - {fileID: 11400000, guid: 2d5c5759e8e2990458b0d03d7c8a28ff, type: 2}
+  horizontalDoor: {fileID: 11400000, guid: d97ce5a05b4b8794880827a161ba86de, type: 2}
+  verticalDoor: {fileID: 11400000, guid: de67798f592770b4fbb06b8643bfbd76, type: 2}
+  lineRotation: {fileID: 11400000, guid: c3ed9d60cc820314a9d3b755759e395d, type: 2}
+  curveRotation: {fileID: 11400000, guid: ac65c7bd30437954b8acd5657bdfdaa4, type: 2}
+  buttons:
+  - buttonPos: {x: 6, y: 0}
+    rotatePos: {x: -3, y: 1}
+  - buttonPos: {x: 6, y: 1}
+    rotatePos: {x: 1, y: 0}
+  - buttonPos: {x: 6, y: 2}
+    rotatePos: {x: 3, y: 4}

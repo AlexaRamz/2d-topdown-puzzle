@@ -16,4 +16,3 @@ MonoBehaviour:
   isEndPoint: 01000100
   onSprite: {fileID: 11400000, guid: e4e15ca3eb4b12442ab364d2bf2f77e3, type: 2}
   offSprite: {fileID: 0}
-  rotIndex: 1

@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c5c32bee308b77441b9c3892d2a8b87c, type: 3}
-  m_Name: RightDown
+  m_Name: Light
   m_EditorClassIdentifier: 
-  tileType: 0
-  isEndPoint: 00010100
-  onSprite: {fileID: 11400000, guid: 37565be62cecb8a4c8b845835ec1e883, type: 2}
-  offSprite: {fileID: 11400000, guid: dd599cc74763851489902e45b3f21894, type: 2}
+  tileType: 4
+  isEndPoint: 01010101
+  onSprite: {fileID: 11400000, guid: 8eacdaddf938e734691b7ceabd854377, type: 2}
+  offSprite: {fileID: 11400000, guid: ce0eb32b55a4845438e057498c683aa3, type: 2}

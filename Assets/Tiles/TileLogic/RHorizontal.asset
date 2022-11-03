@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: RHorizontal
   m_EditorClassIdentifier: 
   tileType: 2
-  isEndPoint: 00000000
+  isEndPoint: 00010001
   onSprite: {fileID: 11400000, guid: 93d31acad7bed6a40bec8e109c84af36, type: 2}
   offSprite: {fileID: 0}
