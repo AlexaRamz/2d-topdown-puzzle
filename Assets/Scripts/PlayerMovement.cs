@@ -10,6 +10,13 @@ public class PlayerMovement : MonoBehaviour
 
     public LayerMask layerMask;
 
+    private Animator animator;
+
+    private void Start()
+    {
+        animator = GetComponent<Animator>();
+    }
+
     void Update()
     {
         if (Input.GetAxis("Vertical") != 0 || Input.GetAxis("Horizontal") != 0)
@@ -33,9 +40,10 @@ public class PlayerMovement : MonoBehaviour
             {
                 dir.y = -1;
             }
-
             Move(dir);
         }
+
+        animator.SetBool("Running", isMoving);
 
         /**if (Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.W))
         {
@@ -75,7 +83,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void Move(Vector3 direction)
     {
-        if (!isMoving)
+        if (!isMoving && direction != Vector3.zero)
         {
             Debug.DrawRay(transform.position, direction);
 
