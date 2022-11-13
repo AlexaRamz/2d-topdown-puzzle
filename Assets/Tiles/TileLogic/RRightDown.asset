@@ -14,5 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tileType: 3
   isEndPoint: 00010100
-  onSprite: {fileID: 11400000, guid: 5bd7be2979596aa4692f28984d37c14e, type: 2}
+  onTile: {fileID: 11400000, guid: 5bd7be2979596aa4692f28984d37c14e, type: 2}
+  offTile: {fileID: 0}
+  onSprite: {fileID: -1924288930, guid: 8baa8bcde8beaa84083342e0870f6f0f, type: 3}
   offSprite: {fileID: 0}

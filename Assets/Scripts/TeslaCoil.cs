@@ -6,41 +6,20 @@ using UnityEngine.Tilemaps;
 
 public class TeslaCoil : MonoBehaviour
 {
-    private Tilemap puzzleMap;
-    private SpriteRenderer spriteRenderer;
-    public bool powered;
-    [SerializeField] private Sprite onSprite;
-    [SerializeField] private Sprite offSprite;
-    [SerializeField] private Tile[] poweredTiles;
     [SerializeField] private GameObject[] electricityZones;
 
-    // Start is called before the first frame update
-    void Start()
+    public void ZonesOn()
     {
-        puzzleMap = GameObject.FindGameObjectWithTag("PuzzleTilemap").GetComponent<Tilemap>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (poweredTiles.Contains(puzzleMap.GetTile(puzzleMap.WorldToCell(transform.position))))
+        foreach (GameObject zone in electricityZones)
         {
-            powered = true;
-            spriteRenderer.sprite = onSprite;
-            foreach (GameObject zone in electricityZones)
-            {
-                zone.SetActive(true);
-            }
+            zone.SetActive(true);
         }
-        else
+    }
+    public void ZonesOff()
+    {
+        foreach (GameObject zone in electricityZones)
         {
-            powered = false;
-            spriteRenderer.sprite = offSprite;
-            foreach (GameObject zone in electricityZones)
-            {
-                zone.SetActive(false);
-            }
+            zone.SetActive(false);
         }
     }
 }

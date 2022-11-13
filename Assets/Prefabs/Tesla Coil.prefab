@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3723738054794260983}
   - component: {fileID: 3723738054794260981}
   - component: {fileID: 3723738054794260982}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Square (8)
   m_TagString: Electricity
   m_Icon: {fileID: 0}
@@ -122,7 +122,7 @@ GameObject:
   - component: {fileID: 3723738055156997303}
   - component: {fileID: 3723738055156997301}
   - component: {fileID: 3723738055156997302}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Square (4)
   m_TagString: Electricity
   m_Icon: {fileID: 0}
@@ -233,7 +233,7 @@ GameObject:
   - component: {fileID: 3723738055236323022}
   - component: {fileID: 3723738055236323020}
   - component: {fileID: 3723738055236323021}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Square (2)
   m_TagString: Electricity
   m_Icon: {fileID: 0}
@@ -344,7 +344,7 @@ GameObject:
   - component: {fileID: 3723738055338265210}
   - component: {fileID: 3723738055338265208}
   - component: {fileID: 3723738055338265209}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Square (1)
   m_TagString: Electricity
   m_Icon: {fileID: 0}
@@ -455,7 +455,7 @@ GameObject:
   - component: {fileID: 3723738055624997400}
   - component: {fileID: 3723738055624997414}
   - component: {fileID: 3723738055624997415}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Square (7)
   m_TagString: Electricity
   m_Icon: {fileID: 0}
@@ -566,7 +566,7 @@ GameObject:
   - component: {fileID: 3723738055781782691}
   - component: {fileID: 3723738055781782689}
   - component: {fileID: 3723738055781782690}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Square (5)
   m_TagString: Electricity
   m_Icon: {fileID: 0}
@@ -677,7 +677,7 @@ GameObject:
   - component: {fileID: 3723738055867135703}
   - component: {fileID: 3723738055867135701}
   - component: {fileID: 3723738055867135702}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Square (6)
   m_TagString: Electricity
   m_Icon: {fileID: 0}
@@ -788,7 +788,7 @@ GameObject:
   - component: {fileID: 3723738056019901309}
   - component: {fileID: 3723738056019901307}
   - component: {fileID: 3723738056019901308}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Square (3)
   m_TagString: Electricity
   m_Icon: {fileID: 0}
@@ -899,7 +899,7 @@ GameObject:
   - component: {fileID: 3723738056340988099}
   - component: {fileID: 3723738056340988097}
   - component: {fileID: 3723738056340988098}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Square (9)
   m_TagString: Electricity
   m_Icon: {fileID: 0}
@@ -1010,7 +1010,9 @@ GameObject:
   - component: {fileID: 3723738056350944724}
   - component: {fileID: 3723738056350944725}
   - component: {fileID: 3723738056350944726}
-  m_Layer: 0
+  - component: {fileID: 215573041}
+  - component: {fileID: 215573042}
+  m_Layer: 6
   m_Name: Tesla Coil
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1093,7 +1095,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!114 &3723738056350944726
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1106,16 +1108,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 104b475461fef9544ac734ac94cc22dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  powered: 0
-  onSprite: {fileID: 21300000, guid: e6c006ba33e172e4e803baa93be578ef, type: 3}
-  offSprite: {fileID: 21300000, guid: 57357e2e08d70304186c555bfa44e1e5, type: 3}
-  poweredTiles:
-  - {fileID: 11400000, guid: 40a3fb7bd3c84684e9a1cf1083078c3b, type: 2}
-  - {fileID: 11400000, guid: d38d6884b1e2d8043bba5d5c529a9427, type: 2}
-  - {fileID: 11400000, guid: 37565be62cecb8a4c8b845835ec1e883, type: 2}
-  - {fileID: 11400000, guid: 1d680eb93cdc4bb41add1c33cf980f58, type: 2}
-  - {fileID: 11400000, guid: 088046021504312448df3dd5ec15872f, type: 2}
-  - {fileID: 11400000, guid: f6182cc0f738d0f44a945a7bee33e639, type: 2}
   electricityZones:
   - {fileID: 3723738056456989012}
   - {fileID: 3723738055338265211}
@@ -1127,6 +1119,46 @@ MonoBehaviour:
   - {fileID: 3723738055624997401}
   - {fileID: 3723738054794260968}
   - {fileID: 3723738056340988100}
+--- !u!114 &215573041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3723738056350944727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b20271887fca7e446a01f99758521da5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onSprite: {fileID: 21300000, guid: e6c006ba33e172e4e803baa93be578ef, type: 3}
+  offSprite: {fileID: 21300000, guid: 57357e2e08d70304186c555bfa44e1e5, type: 3}
+--- !u!61 &215573042
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3723738056350944727}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.1875}
+    oldSize: {x: 1, y: 1.5}
+    newSize: {x: 1, y: 1.5}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &3723738056456989012
 GameObject:
   m_ObjectHideFlags: 0
@@ -1138,7 +1170,7 @@ GameObject:
   - component: {fileID: 3723738056456989011}
   - component: {fileID: 3723738056456989009}
   - component: {fileID: 3723738056456989010}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Square
   m_TagString: Electricity
   m_Icon: {fileID: 0}

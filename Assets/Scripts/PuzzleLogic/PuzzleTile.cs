@@ -12,7 +12,6 @@ public class PuzzleTile : ScriptableObject
         Source,
         LineRotatable,
         CurveRotatable,
-        Light,
         Other,
     }
 
@@ -20,8 +19,10 @@ public class PuzzleTile : ScriptableObject
     //Up, Right, Down, Left
     public bool[] isEndPoint = new bool[4];
 
-    public TileBase onSprite;
-    public TileBase offSprite;
+    public TileBase onTile;
+    public TileBase offTile;
+    public Sprite onSprite;
+    public Sprite offSprite;
 }
 public class TileState
 {
@@ -66,6 +67,10 @@ public class TileState
     {
         rotIndex = index;
         puzzleTile = rotateTile.tiles[rotIndex];
+    }
+    public bool IsRotatable()
+    {
+        return rotateTile != null;
     }
     public void SetRotations(RotateTile rotations)
     {

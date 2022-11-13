@@ -11,7 +11,6 @@ public class PuzzleLogic : MonoBehaviour
     TileState[,] puzzleArray;
     List<TileState> sources = new List<TileState>();
     public Tilemap tilemap;
-    GridLayout gridLayout;
 
     public PuzzleTile source;
     public PuzzleTile light;
@@ -20,25 +19,16 @@ public class PuzzleLogic : MonoBehaviour
     // doors
     public PuzzleTile horizontalDoor;
     public PuzzleTile verticalDoor;
-
+    // rotatable tile collections
     public RotateTile lineRotation;
     public RotateTile curveRotation;
-
-    [System.Serializable]
-    public class ButtonToRotate
-    {
-        public Vector2Int buttonPos;
-        public Vector2Int rotatePos;
-    }
-    public List<ButtonToRotate> buttons = new List<ButtonToRotate>();
 
     Transform plr;
 
     void Start()
     {
-        plr = GameObject.Find("Player").transform;
-        gridLayout = tilemap.transform.parent.GetComponent<GridLayout>();
         puzzleArray = new TileState[height, width];
+        plr = GameObject.Find("Player").transform;
         GetPuzzleTiles();
     }
     void GetPuzzleTiles()
@@ -107,24 +97,39 @@ public class PuzzleLogic : MonoBehaviour
                 TileState tileState = puzzleArray[x, y];
                 if (tileState != null)
                 {
-                    Vector2Int cellPos = GetCellPos(new Vector2Int(x, y));
-                    if (tileState.puzzleTile.tileType == PuzzleTile.TileType.Wire || tileState.puzzleTile.tileType == PuzzleTile.TileType.Light)
+                    Vector3Int cellPos = (Vector3Int)GetCellPos(new Vector2Int(x, y));
+                    if (tileState.puzzleTile.tileType == PuzzleTile.TileType.Wire)
                     {
                         if (tileState.on)
                         {
-                            tilemap.SetTile(new Vector3Int(cellPos.x, cellPos.y, 0), tileState.puzzleTile.onSprite);
+                            tilemap.SetTile(cellPos, tileState.puzzleTile.onTile);
                             Debug.Log("on");
                         }
                         else
                         {
-                            tilemap.SetTile(new Vector3Int(cellPos.x, cellPos.y, 0), tileState.puzzleTile.offSprite);
+                            tilemap.SetTile(cellPos, tileState.puzzleTile.offTile);
                             Debug.Log("off");
                         }
                     }
                     else
                     {
-                        tilemap.SetTile(new Vector3Int(cellPos.x, cellPos.y, 0), tileState.puzzleTile.onSprite);
+                        tilemap.SetTile(cellPos, tileState.puzzleTile.onTile);
                     }
+                }
+            }
+        }
+        foreach (Transform obj in tilemap.transform)
+        {
+            if (obj.GetComponent<PuzzleObject>() != null)
+            {
+                PuzzleObject puzzleObj = obj.GetComponent<PuzzleObject>();
+                if (IsPowered(puzzleObj.GetPos()))
+                {
+                    puzzleObj.OnSprite();
+                }
+                else
+                {
+                    puzzleObj.OffSprite();
                 }
             }
         }
@@ -223,6 +228,25 @@ public class PuzzleLogic : MonoBehaviour
             }
         }
     }
+    public void RotateTileAt(Vector2Int cellPos)
+    {
+        TileState tile = GetTileFromArray(GetArrayPos(cellPos));
+        if (tile != null && tile.IsRotatable())
+        {
+            tile.AdvanceRotation();
+            SetPower();
+        }
+    }
+    public bool PlayerIsOn(Vector2Int cellPos)
+    {
+        Vector2Int plrPos = (Vector2Int)tilemap.WorldToCell(plr.position);
+        return plrPos == cellPos;
+    }
+    public bool IsPowered(Vector2Int cellPos)
+    {
+        TileState tile = GetTileFromArray(GetArrayPos(cellPos));
+        return tile != null && tile.puzzleTile.tileType == PuzzleTile.TileType.Wire && tile.on;
+    }
     void SetPower()
     {
         // Begin at each power source tile and recursively update the adjacent tiles
@@ -235,30 +259,10 @@ public class PuzzleLogic : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0)) // Rotate on click
         {
-            Vector3Int cellPos = gridLayout.WorldToCell(Camera.main.ScreenToWorldPoint(Input.mousePosition));
-            Vector2Int pos = new Vector2Int(cellPos.x, cellPos.y);
-            TileState tile = GetTileFromArray(GetArrayPos(pos));
-            if (tile != null && (tile.puzzleTile.tileType == PuzzleTile.TileType.LineRotatable || tile.puzzleTile.tileType == PuzzleTile.TileType.CurveRotatable))
-            {
-                tile.AdvanceRotation();
-                SetPower();
-            }
-        }
-        if (Input.GetKeyDown("return"))
-        {
-            Vector3Int cellPos = gridLayout.WorldToCell(plr.position);
-            Vector2Int pos = new Vector2Int(cellPos.x, cellPos.y);
-            Debug.Log(pos);
-            foreach (ButtonToRotate item in buttons)
-            {
-                if (item.buttonPos == pos)
-                {
-                    GetTileFromArray(GetArrayPos(item.rotatePos)).AdvanceRotation();
-                    SetPower();
-                }
-            }
+            Vector2Int mousePos = (Vector2Int)tilemap.WorldToCell(Camera.main.ScreenToWorldPoint(Input.mousePosition));
+            RotateTileAt(mousePos);
         }
     }
 }

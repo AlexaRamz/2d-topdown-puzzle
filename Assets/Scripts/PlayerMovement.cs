@@ -87,7 +87,7 @@ public class PlayerMovement : MonoBehaviour
         {
             Debug.DrawRay(transform.position, direction);
 
-            RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, 1, layerMask);
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, 1, layerMask); // tile hit
             if (hit.collider != null)
             {
                 StartCoroutine(BadMoveUnit(direction));
