@@ -15,7 +15,10 @@ public class Button : MonoBehaviour
         buttonPos = (Vector2Int)puzzleMng.tilemap.WorldToCell(transform.position);
     }
 
-    // Update is called once per frame
+    void PlayAnim()
+    {
+        GetComponent<Animator>().SetTrigger("Press");
+    }
     void Update()
     {
         if (Input.GetKeyDown("return"))
@@ -23,6 +26,7 @@ public class Button : MonoBehaviour
             if (puzzleMng.PlayerIsOn(buttonPos))
             {
                 puzzleMng.RotateTileAt(rotatePos);
+                PlayAnim();
             }
         }
     }

@@ -5,17 +5,19 @@ using UnityEngine.Tilemaps;
 
 public class PuzzleObject : MonoBehaviour
 {
-    Tilemap puzzleMap;
     SpriteRenderer spriteRenderer;
     public Sprite onSprite;
     public Sprite offSprite;
+    public Sprite brokenSprite;
+    public bool broken = false;
     Vector2Int cellPos;
+    PuzzleLogic puzzleMng;
 
     void Start()
     {
-        puzzleMap = transform.parent.gameObject.GetComponent<Tilemap>();
+        puzzleMng = GameObject.Find("PuzzleManager").GetComponent<PuzzleLogic>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-        cellPos = (Vector2Int)puzzleMap.WorldToCell(transform.position);
+        cellPos = (Vector2Int)puzzleMng.tilemap.WorldToCell(transform.position);
     }
     public Vector2Int GetPos()
     {
@@ -35,6 +37,21 @@ public class PuzzleObject : MonoBehaviour
         if (GetComponent<TeslaCoil>())
         {
             GetComponent<TeslaCoil>().ZonesOff();
+        }
+    }
+    public void BrokenSprite()
+    {
+        spriteRenderer.sprite = brokenSprite;
+    }
+    void Update()
+    {
+        if (broken && Input.GetKeyDown("return")) // Fix when near
+        {
+            if (puzzleMng.PlayerIsNear(cellPos))
+            {
+                broken = false;
+                puzzleMng.UpdateTileSprites();
+            }
         }
     }
 }

@@ -13,7 +13,6 @@ public class PuzzleLogic : MonoBehaviour
     public Tilemap tilemap;
 
     public PuzzleTile source;
-    public PuzzleTile light;
     public PuzzleTile[] wires = new PuzzleTile[6];
     public PuzzleTile[] rotatableWires = new PuzzleTile[6]; // rotatable
     // doors
@@ -85,10 +84,9 @@ public class PuzzleLogic : MonoBehaviour
         if (name == "RLeftUp") return rotatableWires[5];
         if (name == "walldoors_3") return horizontalDoor;
         if (name == "walldoors_1") return verticalDoor;
-        if (name == "Light") return light;
         return null;
     }
-    void UpdateTileSprites()
+    public void UpdateTileSprites()
     {
         for (int x = 0; x < width; x++)
         {
@@ -123,7 +121,11 @@ public class PuzzleLogic : MonoBehaviour
             if (obj.GetComponent<PuzzleObject>() != null)
             {
                 PuzzleObject puzzleObj = obj.GetComponent<PuzzleObject>();
-                if (IsPowered(puzzleObj.GetPos()))
+                if (puzzleObj.broken)
+                {
+                    puzzleObj.BrokenSprite();
+                }
+                else if (IsPowered(puzzleObj.GetPos()))
                 {
                     puzzleObj.OnSprite();
                 }
@@ -241,6 +243,11 @@ public class PuzzleLogic : MonoBehaviour
     {
         Vector2Int plrPos = (Vector2Int)tilemap.WorldToCell(plr.position);
         return plrPos == cellPos;
+    }
+    public bool PlayerIsNear(Vector2Int cellPos)
+    {
+        Vector2Int plrPos = (Vector2Int)tilemap.WorldToCell(plr.position);
+        return Vector2.Distance(plrPos, cellPos) == 1;
     }
     public bool IsPowered(Vector2Int cellPos)
     {

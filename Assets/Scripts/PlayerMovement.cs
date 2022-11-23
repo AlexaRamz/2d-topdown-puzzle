@@ -42,7 +42,6 @@ public class PlayerMovement : MonoBehaviour
             }
             Move(dir);
         }
-
         animator.SetBool("Running", isMoving);
 
         /**if (Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.W))
