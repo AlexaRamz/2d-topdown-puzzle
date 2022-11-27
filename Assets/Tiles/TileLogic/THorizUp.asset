@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5c32bee308b77441b9c3892d2a8b87c, type: 3}
+  m_Name: THorizUp
+  m_EditorClassIdentifier: 
+  tileType: 0
+  isEndPoint: 01010001
+  onTile: {fileID: 11400000, guid: 6206db668712686499a15d855856ec10, type: 2}
+  offTile: {fileID: 11400000, guid: 8b3a830b9f7e1b84fbda09c17f372866, type: 2}
+  rotation: {x: 0, y: 0, z: 90}

@@ -23,6 +23,7 @@ public class PlayerRespawn : MonoBehaviour
     {
         if (collision.tag == "Electricity")
         {
+            GetComponent<AudioSource>().Play();
             loader.ReloadLevel();
         }
     }

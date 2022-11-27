@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ce248905aeb4d847832499efc1dba92, type: 3}
+  m_Name: TRotation
+  m_EditorClassIdentifier: 
+  tiles:
+  - {fileID: 11400000, guid: fbedc0a94777a694a970cc0cd834a128, type: 2}
+  - {fileID: 11400000, guid: de2d4c221a0ab7647b639b123a252f59, type: 2}
+  - {fileID: 11400000, guid: 3c354a68ae6bb524b812d5a98e675514, type: 2}
+  - {fileID: 11400000, guid: fc65224736117d3408407a2bae06b883, type: 2}

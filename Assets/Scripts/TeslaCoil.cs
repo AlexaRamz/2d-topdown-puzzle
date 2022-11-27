@@ -7,19 +7,30 @@ using UnityEngine.Tilemaps;
 public class TeslaCoil : MonoBehaviour
 {
     [SerializeField] private GameObject[] electricityZones;
+    bool on = false;
 
     public void ZonesOn()
     {
-        foreach (GameObject zone in electricityZones)
+        if (!on)
         {
-            zone.SetActive(true);
+            transform.Find("OnAudio").GetComponent<AudioSource>().Play();
+            foreach (GameObject zone in electricityZones)
+            {
+                zone.SetActive(true);
+            }
         }
+        on = true;
     }
     public void ZonesOff()
     {
-        foreach (GameObject zone in electricityZones)
+        if (on)
         {
-            zone.SetActive(false);
+            transform.Find("OffAudio").GetComponent<AudioSource>().Play();
+            foreach (GameObject zone in electricityZones)
+            {
+                zone.SetActive(false);
+            }
         }
+        on = false;
     }
 }

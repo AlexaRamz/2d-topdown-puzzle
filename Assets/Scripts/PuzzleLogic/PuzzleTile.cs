@@ -13,6 +13,7 @@ public class PuzzleTile : ScriptableObject
         LineRotatable,
         CurveRotatable,
         Other,
+        TRotatable,
     }
 
     public TileType tileType;
@@ -21,8 +22,7 @@ public class PuzzleTile : ScriptableObject
 
     public TileBase onTile;
     public TileBase offTile;
-    public Sprite onSprite;
-    public Sprite offSprite;
+    public Vector3 rotation;
 }
 public class TileState
 {
