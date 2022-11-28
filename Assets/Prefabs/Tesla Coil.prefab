@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1377715320371466599}
   - component: {fileID: 804546054034684216}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: OnAudio
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -138,7 +138,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1274383277990778330}
   - component: {fileID: 8018643936830315372}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: OffAudio
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1230,7 +1230,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 57357e2e08d70304186c555bfa44e1e5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1281,6 +1281,8 @@ MonoBehaviour:
   brokenSprite: {fileID: 0}
   broken: 0
   source: 0
+  lightbulb: 0
+  lightOn: 0
 --- !u!61 &215573042
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -74,7 +74,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: e37431a9ffc062e4fb520b5be2ab8047, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -103,6 +103,8 @@ MonoBehaviour:
   brokenSprite: {fileID: 21300000, guid: e37431a9ffc062e4fb520b5be2ab8047, type: 3}
   broken: 1
   source: 1
+  lightbulb: 0
+  lightOn: 0
 --- !u!61 &8070593595260638786
 BoxCollider2D:
   m_ObjectHideFlags: 0
