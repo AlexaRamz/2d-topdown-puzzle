@@ -300,7 +300,6 @@ public class PuzzleLogic : MonoBehaviour
     public bool IsPowered(Vector2Int cellPos)
     {
         TileState tile = GetTileFromArray(GetArrayPos(cellPos));
-        Debug.Log(cellPos);
         return tile != null && tile.on;
     }
     public IEnumerator WinCanvas()
