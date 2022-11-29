@@ -70,6 +70,7 @@ public class PuzzleObject : MonoBehaviour
             if (puzzleMng.PlayerIsNear(cellPos))
             {
                 broken = false;
+                puzzleMng.FixAnim();
                 if (source)
                 {
                     puzzleMng.FixSourceAt(cellPos);

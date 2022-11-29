@@ -19,12 +19,20 @@ public class PlayerRespawn : MonoBehaviour
             loader.ReloadLevel();
         }
     }
+    IEnumerator ReloadDelay()
+    {
+        yield return new WaitForSeconds(2);
+        loader.ReloadLevel();
+    }
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Electricity")
         {
             GetComponent<AudioSource>().Play();
-            loader.ReloadLevel();
+            GetComponent<Animator>().ResetTrigger("Shock");
+            GetComponent<Animator>().SetTrigger("Shock");
+            GetComponent<PlayerMovement>().enabled = false;
+            StartCoroutine(ReloadDelay());
         }
     }
 }

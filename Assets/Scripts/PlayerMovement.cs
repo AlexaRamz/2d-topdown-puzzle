@@ -21,6 +21,8 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetAxis("Vertical") != 0 || Input.GetAxis("Horizontal") != 0)
         {
+            animator.SetFloat("Horizontal", Input.GetAxis("Horizontal"));
+            animator.SetFloat("Vertical", Input.GetAxis("Vertical"));
             Vector3 dir = new Vector3 (0,0,0);
 
             if (Input.GetAxis("Horizontal") > 0)

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e5b9beaae151a8345a506b6933ec4ee4
+guid: b42a663411930ba468a7d80efc7ab9ab
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -102,7 +102,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: WebGL
+    buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -114,7 +114,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: Android
+    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -129,112 +129,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: robot_run_forward_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 576
-        width: 64
-        height: 64
-      alignment: 9
-      pivot: {x: 0.5, y: 0.140625}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3fc605a0a53c9324d806f349bfb9748b
-      internalID: -145710289
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: robot_run_forward_1
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 512
-        width: 64
-        height: 64
-      alignment: 9
-      pivot: {x: 0.5, y: 0.140625}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cec1e9ec965a0564c8294421c62a61c7
-      internalID: -1619328491
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: robot_run_forward_2
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 448
-        width: 64
-        height: 64
-      alignment: 9
-      pivot: {x: 0.5, y: 0.140625}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b2a6ace4dbe658b4fb25dfb8ce151f63
-      internalID: -1992190147
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: robot_run_forward_3
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 384
-        width: 64
-        height: 64
-      alignment: 9
-      pivot: {x: 0.5, y: 0.140625}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d4896ce051b44874581e1d5ae026c271
-      internalID: -489747781
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: robot_run_forward_4
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 320
-        width: 64
-        height: 64
-      alignment: 9
-      pivot: {x: 0.5, y: 0.140625}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 20eb8592e08ab9a48b43c12b982e0fad
-      internalID: -1530775291
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: robot_run_forward_5
+      name: robot_idle_left_0
       rect:
         serializedVersion: 2
         x: 0
@@ -248,14 +143,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 464cc517e3141cf42a5e4b6462378422
-      internalID: 1926464422
+      spriteID: e3c4886b009c3ab49b75547058470bc9
+      internalID: -794778002
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: robot_run_forward_6
+      name: robot_idle_left_1
       rect:
         serializedVersion: 2
         x: 0
@@ -269,14 +164,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 69dea34c687def5448921357bd442f98
-      internalID: 1790955863
+      spriteID: 1e66b59a3aad85340a630e64fa1388ab
+      internalID: -2065622287
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: robot_run_forward_7
+      name: robot_idle_left_2
       rect:
         serializedVersion: 2
         x: 0
@@ -284,20 +179,20 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 9
-      pivot: {x: 0.53125, y: 0.140625}
+      pivot: {x: 0.5, y: 0.140625}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 67dd0d88bc4c00f4fb54a57116ede3e9
-      internalID: 898109015
+      spriteID: 2184033bc651c9c4e9e479e5921f4e2c
+      internalID: 961573433
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: robot_run_forward_8
+      name: robot_idle_left_3
       rect:
         serializedVersion: 2
         x: 0
@@ -311,14 +206,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 75ad5a2d50371d94f8a116907e94d5fc
-      internalID: -1374693726
+      spriteID: 393a4fb55c44a324682d189eb22563e5
+      internalID: 1616502199
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: robot_run_forward_9
+      name: robot_idle_left_4
       rect:
         serializedVersion: 2
         x: 0
@@ -332,8 +227,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f19d5fd41fbc2844b9828d5d137611ab
-      internalID: -1135132708
+      spriteID: 2d73325864b0eba43a37b7cea9507896
+      internalID: 478725065
       vertices: []
       indices: 
       edges: []
@@ -349,16 +244,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      robot_run_forward_8: -1374693726
-      robot_run_forward_7: 898109015
-      robot_run_forward_3: -489747781
-      robot_run_forward_2: -1992190147
-      robot_run_forward_4: -1530775291
-      robot_run_forward_5: 1926464422
-      robot_run_forward_9: -1135132708
-      robot_run_forward_1: -1619328491
-      robot_run_forward_0: -145710289
-      robot_run_forward_6: 1790955863
+      robot_idle_left_0: -794778002
+      robot_idle_left_1: -2065622287
+      robot_idle_left_4: 478725065
+      robot_idle_left_3: 1616502199
+      robot_idle_left_2: 961573433
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

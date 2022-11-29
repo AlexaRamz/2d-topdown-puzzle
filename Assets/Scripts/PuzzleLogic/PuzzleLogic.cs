@@ -287,6 +287,11 @@ public class PuzzleLogic : MonoBehaviour
             Debug.Log("fix");
         }
     }
+    public void FixAnim()
+    {
+        plr.GetComponent<Animator>().ResetTrigger("Fix");
+        plr.GetComponent<Animator>().SetTrigger("Fix");
+    }
     public bool PlayerIsOn(Vector2Int cellPos)
     {
         Vector2Int plrPos = (Vector2Int)tilemap.WorldToCell(plr.position);

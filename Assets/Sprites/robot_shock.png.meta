@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e5b9beaae151a8345a506b6933ec4ee4
+guid: c46454aa7838e77479541f8a868697a4
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -102,7 +102,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: WebGL
+    buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -114,7 +114,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: Android
+    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -129,211 +129,274 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: robot_run_forward_0
+      name: robot_shock_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 768
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e343c6d1b0782143bb623a06c091c4a
+      internalID: -125632401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: robot_shock_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 704
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77309f29410882b4b90b9e444aa05a3c
+      internalID: 814857164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: robot_shock_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 640
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 794985fa7d4605746884a2b81cb6a2c3
+      internalID: 1321654531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: robot_shock_3
       rect:
         serializedVersion: 2
         x: 0
         y: 576
         width: 64
         height: 64
-      alignment: 9
-      pivot: {x: 0.5, y: 0.140625}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3fc605a0a53c9324d806f349bfb9748b
-      internalID: -145710289
+      spriteID: db28adb319a2d144c8247cf29b4bf7f3
+      internalID: 1554971821
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: robot_run_forward_1
+      name: robot_shock_4
       rect:
         serializedVersion: 2
         x: 0
         y: 512
         width: 64
         height: 64
-      alignment: 9
-      pivot: {x: 0.5, y: 0.140625}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cec1e9ec965a0564c8294421c62a61c7
-      internalID: -1619328491
+      spriteID: 80936e9387f0b3a47b3e2e7962a3e375
+      internalID: -1734073699
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: robot_run_forward_2
+      name: robot_shock_5
       rect:
         serializedVersion: 2
         x: 0
         y: 448
         width: 64
         height: 64
-      alignment: 9
-      pivot: {x: 0.5, y: 0.140625}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b2a6ace4dbe658b4fb25dfb8ce151f63
-      internalID: -1992190147
+      spriteID: 6b738f57369f6444787f17a615e79e08
+      internalID: -1123103753
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: robot_run_forward_3
+      name: robot_shock_6
       rect:
         serializedVersion: 2
         x: 0
         y: 384
         width: 64
         height: 64
-      alignment: 9
-      pivot: {x: 0.5, y: 0.140625}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d4896ce051b44874581e1d5ae026c271
-      internalID: -489747781
+      spriteID: 66cac33a0e71e8f41a5e5e8c606f8a29
+      internalID: 1901609069
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: robot_run_forward_4
+      name: robot_shock_7
       rect:
         serializedVersion: 2
         x: 0
         y: 320
         width: 64
         height: 64
-      alignment: 9
-      pivot: {x: 0.5, y: 0.140625}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 20eb8592e08ab9a48b43c12b982e0fad
-      internalID: -1530775291
+      spriteID: cd0d0efa5588377448bd2cf11219ee92
+      internalID: 1350686476
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: robot_run_forward_5
+      name: robot_shock_8
       rect:
         serializedVersion: 2
         x: 0
         y: 256
         width: 64
         height: 64
-      alignment: 9
-      pivot: {x: 0.5, y: 0.140625}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 464cc517e3141cf42a5e4b6462378422
-      internalID: 1926464422
+      spriteID: aacfc50b686422b41b6daa567a3c6ab1
+      internalID: 783114502
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: robot_run_forward_6
+      name: robot_shock_9
       rect:
         serializedVersion: 2
         x: 0
         y: 192
         width: 64
         height: 64
-      alignment: 9
-      pivot: {x: 0.5, y: 0.140625}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 69dea34c687def5448921357bd442f98
-      internalID: 1790955863
+      spriteID: 6be3859f86ab82746b35c90a74794bc9
+      internalID: -522064753
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: robot_run_forward_7
+      name: robot_shock_10
       rect:
         serializedVersion: 2
         x: 0
         y: 128
         width: 64
         height: 64
-      alignment: 9
-      pivot: {x: 0.53125, y: 0.140625}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 67dd0d88bc4c00f4fb54a57116ede3e9
-      internalID: 898109015
+      spriteID: d9f5c93b347fd0e4091c3bb0ead6df5d
+      internalID: 812724052
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: robot_run_forward_8
+      name: robot_shock_11
       rect:
         serializedVersion: 2
         x: 0
         y: 64
         width: 64
         height: 64
-      alignment: 9
-      pivot: {x: 0.5, y: 0.140625}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 75ad5a2d50371d94f8a116907e94d5fc
-      internalID: -1374693726
+      spriteID: a173addde97970b49a021dfceeac5206
+      internalID: -901160673
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: robot_run_forward_9
+      name: robot_shock_12
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 64
         height: 64
-      alignment: 9
-      pivot: {x: 0.5, y: 0.140625}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f19d5fd41fbc2844b9828d5d137611ab
-      internalID: -1135132708
+      spriteID: 96a586ef270fc4a45a774eeccbfee5be
+      internalID: 423260538
       vertices: []
       indices: 
       edges: []
@@ -349,16 +412,19 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      robot_run_forward_8: -1374693726
-      robot_run_forward_7: 898109015
-      robot_run_forward_3: -489747781
-      robot_run_forward_2: -1992190147
-      robot_run_forward_4: -1530775291
-      robot_run_forward_5: 1926464422
-      robot_run_forward_9: -1135132708
-      robot_run_forward_1: -1619328491
-      robot_run_forward_0: -145710289
-      robot_run_forward_6: 1790955863
+      robot_shock_8: 783114502
+      robot_shock_3: 1554971821
+      robot_shock_2: 1321654531
+      robot_shock_11: -901160673
+      robot_shock_12: 423260538
+      robot_shock_10: 812724052
+      robot_shock_5: -1123103753
+      robot_shock_1: 814857164
+      robot_shock_7: 1350686476
+      robot_shock_0: -125632401
+      robot_shock_4: -1734073699
+      robot_shock_9: -522064753
+      robot_shock_6: 1901609069
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
